@@ -1,0 +1,18 @@
+<div class="form-area">
+<h1>Form</h1>
+
+
+<input placeholder="Title" [(ngModel)]="postTitle">
+<br>
+<input placeholder="Image URL" [(ngModel)]="Link">
+<br>
+<input placeholder="Post URL" [(ngModel)]="postLink">
+<br>
+<input type = "checkbox"> Add Background
+</div>
+
+<br><br>
+
+<h2>{{postTitle}}</h2>
+<img [src]="Link">
+<a [href] = "postLink" [style.display] = "postLink ? 'block' : 'none' ">More Details</a>
