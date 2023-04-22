@@ -1,4 +1,35 @@
 <h1>This component is the parent component!</h1>
 
+
+
+<!-- Parent to child component Code -->
 <h2>Calling the child component which has a button that displays some message on clicking!</h2>
 <app-child-comp [parentVariable]="parentVariable"></app-child-comp>
+
+<br>
+<br>
+
+
+
+
+<!-- Child to parent component Code with View Port -->
+
+<h2>
+  Calling the child component and getting the data with the ViewPort Decorator
+</h2>
+<app-child-comp-sending-viewport></app-child-comp-sending-viewport>
+<p>{{messageFromChildComp1}}</p>
+
+
+
+
+
+
+
+
+<!-- Child to parent component Code with Output -->
+<h2>
+  Calling the child component and getting the data with the Output Decorator
+</h2>
+<app-child-comp-sending-output (outputEvent) = "messageIncoming($event)"></app-child-comp-sending-output>
+{{messageFromChildComp2}}
